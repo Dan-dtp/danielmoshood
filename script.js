@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (terminalTyping) {
         const commands = [
             'npm install danielmoshood',
-            'docker-compose up -d',
+            'cd danielmoshood',
             'start project'
         ];
         let commandIndex = 0;
@@ -153,109 +153,59 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize particles.js if available
     if (typeof particlesJS !== 'undefined') {
         particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
+  "particles": {
+    "number": {
+      "value": 120,  // Increased from 80
+      "density": {
+        "enable": true,
+        "value_area": 800  // More densely packed
+      }
+    },
+    "size": {
+      "value": 5,  // Larger particles (default was 3)
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 5,  // Bounce animation
+        "size_min": 3,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 120,  // Reduced from 150 for more connections
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1.5  // Thicker lines
+    },
+    "move": {
+      "enable": true,
+      "speed": 3,  // Faster movement
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "bounce",  // Particles bounce at edges
+      "bounce": true,
+      "attract": {
+        "enable": true,
+        "rotateX": 1000,
+        "rotateY": 1000
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"  // Particles attract to cursor
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"  // Click pushes particles away
+      }
+    }
+  }
         });
     }
     

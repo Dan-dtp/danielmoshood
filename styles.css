@@ -239,8 +239,10 @@ ul {
 .hero-content {
     position: relative;
     z-index: 2;
+    width: 90%;
     max-width: 800px;
-    padding: 0 1.5rem;
+    margin: 0 auto; /* Extra horizontal centering */
+    padding: 20px;
 }
 
 .hero h1 {
@@ -1260,4 +1262,35 @@ footer p {
 /* Dark mode support */
 [data-theme="dark"] .thank-you-card {
     box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+/* Make canvas fill entire hero */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Ensure content stays above particles */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional: Gradient overlay for better contrast */
+#particles-js::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(37, 99, 235, 0.1) 0%,
+    rgba(37, 99, 235, 0.3) 100%
+  );
 }
