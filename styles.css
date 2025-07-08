@@ -587,16 +587,9 @@ ul {
     padding-top: 6rem;       /* Add space above */
     margin-top: 1rem;        /* Extra separation */
     position: relative;      /* For pseudo-elements */
+    padding-bottom: 8rem;
 }
 
-#projects::before {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: var(--primary);
-    margin: 0 auto 3rem;
-}
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -688,22 +681,15 @@ ul {
     font-size: 0.9rem;
 }
 
-
-/* Remove all potential duplicates */
-#projects::before,
-#projects::after,
-#projects .divider {
-    content: none !important;
-    display: none !important;
-    height: 0 !important;
-}
-
 #projects::after {
     content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: block;
     width: 100px;
-    height: 4px;
-    background: var(--primary);
+    height: 30%;
+    background: linear-gradient(to top, var(--bg), transparent);
     margin: 3rem auto 0;
 }
 
