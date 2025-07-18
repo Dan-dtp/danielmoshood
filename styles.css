@@ -581,7 +581,7 @@ ul {
     color: var(--primary);
 }
 
-/* Projects Section - No Images Version */
+/* Projects Section */
 
 #projects {
     padding-top: 6rem;       /* Add space above */
@@ -691,6 +691,11 @@ ul {
     height: 30%;
     background: linear-gradient(to top, var(--bg), transparent);
     margin: 3rem auto 0;
+}
+
+.fa-tasks {
+    color: var(--primary);
+    font-size: 2.5rem;
 }
 
 /* Skills Section */
